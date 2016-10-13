@@ -1,0 +1,18 @@
+{
+  "name": "wpangular",
+  "description": "Un client wordpress en angular pour un blog",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "angular-resource": "1.5.x",
+    "angular-route": "1.5.x",
+    "angular-sanitize": "1.5.x",
+    "skel": "^3.0.1",
+    "jquery": "^3.1.1",
+    "html5shiv": "^3.7.3",
+    "respond": "^1.4.2"
+  }
+}

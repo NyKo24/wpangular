@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html ng-app="wordpressAngular">
+	<head>
+		<title>Future Imperfect by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="bower_components/html5shiv/dist/html5shiv.min.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header ng-include="'template/header.html'" id="header"></header>
+
+				<!-- Menu -->
+					<section ng-include="'template/menu.html'" id="menu"></section>
+
+					<ng-view></ng-view>
+				
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="bower_components/jquery/dist/jquery.min.js"></script>
+			<script src="bower_components/skel/dist/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="bower_components/respond/dest/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script src="bower_components/angular/angular.js"></script>
+    		<script src="bower_components/angular-resource/angular-resource.js"></script>
+    		<script src="bower_components/angular-route/angular-route.js"></script>
+    		<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+
+
+    		<script src="/app/app.module.js"></script>
+    		<script src="/app/app.config.js"></script>
+    		<script src="/app/app.constant.js"></script>
+
+    		<!-- Home -->
+    		<script src="/app/home/home.module.js"></script>
+    		<script src="/app/home/home.controller.js"></script>
+
+    		<!-- Article -->
+    		<script src="/app/article/article.module.js"></script>
+    		<script src="/app/article/article.service.js"></script>
+    		<script src="/app/article/article.controller.js"></script>
+
+    		<!-- Utilisateur -->
+    		<script src="/app/utilisateur/utilisateur.module.js"></script>
+    		<script src="/app/utilisateur/utilisateur.service.js"></script>
+
+    		<!-- Categorie -->
+    		<script src="/app/categorie/categorie.module.js"></script>
+    		<script src="/app/categorie/categorie.service.js"></script>
+
+    		<!-- Tags -->
+    		<script src="/app/tags/tags.module.js"></script>
+    		<script src="/app/tags/tags.service.js"></script>
+
+    		<!-- Media -->
+    		<script src="/app/media/media.module.js"></script>
+    		<script src="/app/media/media.service.js"></script>
+
+	</body>
+</html>

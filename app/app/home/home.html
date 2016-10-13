@@ -1,0 +1,90 @@
+<!-- Main -->
+<div id="main">
+
+	<article class="post" ng-repeat="article in articles" ng-init="scope.currentArticle = article">
+		<header>
+			<div class="title">
+				<h2><a href="#!article/{{ article.slug }}">{{ article.title.rendered }}</a></h2>
+				
+			</div>
+			<div class="meta">
+				<time class="published" datetime="{{ article.date }}">Le {{ article.date | date : "d MMMM yyyy" }}</time>
+				<a href="#" class="author"><span class="name">{{ article.author.name }}</span><img src="{{ article.author.avatar_urls[24] }}" alt="" /></a>
+			</div>
+		</header>
+		<a href="#" class="image featured"><img src=" {{ article.featured_media.media_details.sizes.full.source_url }} " alt="{{ article.featured_media.alt_text }}" /></a>
+		
+		<div ng-bind-html="article.excerpt.rendered"></div>
+
+		<footer>
+			<ul class="actions">
+				<li><a href="#!article/{{ article.slug }}" class="button big">En lire plus</a></li>
+			</ul>
+			<ul class="stats">
+				<li><a href="#">General</a></li>
+				<li><a href="#" class="icon fa-heart">28</a></li>
+				<li><a href="#" class="icon fa-comment">128</a></li>
+			</ul>
+		</footer>
+	</article>
+
+
+	<!-- Pagination -->
+		<ul class="actions pagination">
+			<li><a href="" class="disabled button big previous">Page précédente</a></li>
+			<li><a href="#" class="button big next">Page suivante</a></li>
+		</ul>
+
+</div>
+
+<!-- Sidebar -->
+<section id="sidebar">
+
+	<!-- Intro -->
+		<section id="intro">
+			<a href="#" class="logo"><img src="images/logo.jpg" alt="" /></a>
+			<header>
+				<h2>Nicolas Bordes</h2>
+				<p>Développeur full stack web / freelance / curieux</p>
+			</header>
+		</section>
+
+	<!-- Mini Posts -->
+		<section>
+			<div class="mini-posts">
+
+				<!-- Mini Post -->
+					<article class="mini-post" ng-repeat="article in articles">
+						<header>
+							<h3><a href="#">{{ article.title.rendered }}</a></h3>
+							<time class="published" datetime="{{ article.date }}">Le {{ article.date | date : "d MMMM yyyy" }}</time>
+							
+							<a href="#" class="author"><img src="images/avatar.jpg" alt="" /></a>
+						</header>
+						<a href="#" class="image"><img src="{{ article.featured_media.media_details.sizes.thumbnail.source_url }}" alt="{{ article.featured_media.alt_text }}" /></a>
+					</article>
+			</div>
+		</section>
+
+	<!-- Posts List -->
+		<section>
+			<ul class="posts">
+				<li ng-repeat="article in articles">
+					<article>
+						<header>
+							<h3><a href="#">{{ article.title.rendered }} </a></h3>
+							<time class="published" datetime="{{ article.date }}">Le {{ article.date | date : "d MMMM yyyy" }}</time>
+						</header>
+						<a href="#" class="image"><img src="{{ article.featured_media.media_details.sizes.thumbnail.source_url }}" alt="{{ article.featured_media.alt_text }}" /></a>
+					</article>
+				</li>
+			</ul>
+		</section>
+
+	<!-- About -->
+		<section ng-include="'template/about.html'" class="blurb"></section>
+
+	<!-- Footer -->
+		<section ng-include="'template/footer.html'" id="footer"></section>
+
+</section>
